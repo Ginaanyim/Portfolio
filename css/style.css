@@ -284,15 +284,14 @@ header {
     padding: 0 20px;
 }
 
-.page-header-container h1 {
+/*.page-header-container h1 {
     text-align: center;
-    /* Mindre avstånd mellan rubrik och underrubrik */
     margin-bottom: 0.5rem; 
-}
+}*/
+
 
 .about-grid {
     /* Konsekvent bottenmarginal */
-    margin: 0 0 4rem; 
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr; 
@@ -300,22 +299,13 @@ header {
 }
 
 
-.about-text,
-.about-image
-{
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
 .about-text {
     /* Konsekvent padding */
-    padding: 2.5rem; 
-}
+    padding: 0 1rem 2.5rem 1rem;}
 
 .about-image {
     /* Konsekvent padding */
-    padding: 2rem; 
+    padding: 1rem; 
     text-align: center; 
 }
 
