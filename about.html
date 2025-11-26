@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
     <title>Portfolio</title>
 </head>
 <body>
@@ -21,38 +22,123 @@
         </nav>
     </header>
     <section class="page-header-container">
-        <h2 class="section-title">About me</h2>
+        <h1 class="section-title">About me</h1>
         <p class="section-subtitle">Passion for technolgy and design</p>
     </section>
     <section class="about-grid">
-        <article class="about-text">
-            <h3>Who am I?</h3>
-            <p>I am Virginia Anyim, a dedicated and passionate web developer with a knack for creating visually appealing and user-friendly websites. With a strong foundation in both front-end and back-end development, I strive to deliver seamless digital experiences that captivate users and meet business goals.</p>
-            <p>My journey into web development began with a fascination for technology and design. Over the years, I have honed my skills in various programming languages and frameworks, allowing me to build responsive and dynamic websites. I am committed to staying updated with the latest industry trends and continuously improving my craft.</p>
-        </article>
         <aside class="about-image">
             <img src="/images/portrait.jpg" alt="Portrait of Virginia Anyim">
-            <h4>Virginia Anyim</h4>
-            <p>Web Developer & Designer</p>
-            
+            <h2 id = "name-aboutPage">Virginia Anyim</h2>
+            <p id = "subtitle-aboutPage">B.Sc. in Computer and Systems Science</p>
+
             <ul class="social-icons">
                 <li>
                     <a href="https://github.com/Ginaanyim">
-                        <img src="/images/github.png" alt="GitHub Icon">
-                    </a>
+                        <i class="fab fa-github" aria-hidden="true"></i> </a>
                 </li>
                 <li>
-                    <a href ="https://www.linkedin.com/feed/?legoTrackingToken=30NfmlWqldVomNMsSBA9z0Kc3RBsCZzkTsCfn9xk6NBkDsCfmhLjmNBkDsCejAVejAZp6lQsSlRsmlirnlK9AVfilh9kQZgfnB2sClAsAZQpmtAqnsCt6VBt6VFnT9BqSlBsRZyrSFvcDpAon1EoSVRomMZp4BQpmtAqnsCc3RKrSBQqndLk7hBpShFtOoMbz0Zpn9LoRdOpOoZsC5gr6lisCsCfmhLjmNBkD9D9z0ZrCZFt6BPrR1MtmZOpOoVejAVejRApnhPpnlNpl9JtkVMtmZOpOpQr7lxpClAfmh9s7lLsCsCjAZ9l4BjjR0Zuk9OpmhOrOpQr7lxpClAfmh9t6VBrmtBsOpQrClQrCAZp4BQrSNP9DhItm5CpmgZp4BQtmZVomMCcDpAon1EoSVRomMZpmRxjClDon0Cq7hTrT9Dfmh9s71x9zkSc3wMcPRAimVLqndOpnoCc3gPc34Vd3kUfmh9tipBdC9zoz9xe30MdPkJd6pzoiQVom4QbmgMd64JoC9yejARdzkZp4BQu6lQrCZz">
-                        <img src="/images/linkedin.png" alt="LinkedIn Icon">
-                    </a>
+                    <a href ="https://www.linkedin.com/feed/?...">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i> </a>
                 </li>
             </ul>
         </aside>
+
+        <article class="about-text">
+            <h2>Who am I?</h2>
+            <p>I am Virginia Anyim, a dedicated and passionate web developer with a knack for creating visually appealing and user-friendly websites. With a strong foundation in both front-end and back-end development, I strive to deliver seamless digital experiences that captivate users and meet business goals.</p>
+        </article>
     </section>
 
-  
+    <section id ="timeline">
+        <h2 class="section-title">My Journey</h2>
+        <div class ="timeline-grid">
 
+            <article class ="timeline-card">
+                <h3 class="timeline-year">2020</h3>
+                <p>Graduated High School in Economics at Cybergymnasiet</p>
+            </article>
+            <article class ="timeline-card">
+                <h3 class="timeline-year">2022</h3>
+                <p>Studied Media Technology A at Södertörn Högskola</p>
+            </article>
+            <article class ="timeline-card">
+                <h3 class="timeline-year">2023</h3>
+                <p>Began my studies in Computer and Systems Science Program at Stockholm University</p>
+            </article>
+            <article class ="timeline-card">
+                <h3 class="timeline-year">2025</h3>
+                <p>Completed Bachelor's Degree Computer and Systems Science</p>
+            </article>
+        </div>
+    </section>
 
+    <section id="my-skills">
+        <h2 class="section-title">My Skills</h2>  
+        <div class="skills-grid">
+            
+            <article class="skill-card">
+                <h3 class="skill-header">
+                    <img class="skill-icon" src="/images/icons/code.svg" alt="Kodikon"> 
+                    Frontend
+                </h3>
+                <ul class="skill-badges">
+                    <li class="skill-badge">HTML5</li>
+                    <li class="skill-badge">CSS</li>
+                    <li class="skill-badge">JavaScript</li>
+                    <li class="skill-badge">Responsive Design</li>
+                </ul>
+            </article>
+
+            <article class="skill-card">
+                <h3 class="skill-header">
+                    <img class="skill-icon" src="/images/icons/server.svg" alt="Serverikon">
+                    Backend
+                </h3>
+                <ul class="skill-badges">
+                    <li class="skill-badge">Java</li>
+                    <li class="skill-badge">C#</li>
+                    <li class="skill-badge">Node.js</li>
+                    <li class="skill-badge">PHP</li>
+                    <li class="skill-badge">SQL</li>
+                    <li class="skill-badge">Database Management</li>
+                </ul>
+            </article>
+
+            <article class="skill-card">
+                <h3 class="skill-header">
+                    <img class="skill-icon" src="/images/icons/design.svg" alt="Designikon">
+                    Design
+                </h3>
+                <ul class="skill-badges">
+                    <li class="skill-badge">UI/UX Design</li>
+                    <li class="skill-badge">Adobe XD</li>
+                    <li class="skill-badge">Figma</li>
+                    <li class="skill-badge">Canva</li>
+                </ul>
+            </article>
+
+            <article class="skill-card">
+                <h3 class="skill-header">
+                    <img class="skill-icon" src="/images/icons/globe.svg" alt="Övrigt ikon">
+                    Other
+                </h3>
+                <ul class="skill-badges">
+                    <li class="skill-badge">GitHub</li>
+                    <li class="skill-badge">Agile</li>
+                    <li class="skill-badge">Testing</li>
+                </ul>
+            </article>
+            
+        </div>
+    </section>
+    
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <article class="education-card">
+            <h3>B.Sc. Computer and Systems Science</h3>
+            <p>Stockholm University, 2021-2024</p>
+        </article>
+    </section>
 
     <footer>
         <p>Senast uppdaterad 11/2025</p>
