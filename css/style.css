@@ -279,14 +279,12 @@ header {
 
 
 .about-text {
-    padding: 0 1rem 2rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
 
 .about-image {
-    padding: 0.8rem; 
     text-align: center; 
 }
-
 
 .about-image img {
     width: 40vw; 
@@ -310,7 +308,6 @@ header {
     justify-content: center;
     list-style: none;
     gap: 1.2rem; 
-
 }
 
 .social-icons a {
@@ -394,10 +391,9 @@ header {
 
 #full-projects p {
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 
 }
 
@@ -497,7 +493,6 @@ footer {
 .form-container h3 {
     color: rgb(150, 113, 94);
 }
-
 
 .form-container form {
     display: flex;
