@@ -1,3 +1,14 @@
+@keyframes fadeInSlideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes simple-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +48,10 @@ h3 {
 p {
     font-size: 0.95rem; 
     margin-bottom: 1rem; 
+}
+
+.no-margin {
+    margin: 0;
 }
 
 section, footer {
@@ -107,20 +122,32 @@ header {
 }
 
 #home-content h1 {
+    opacity: 0; 
+    animation: simple-fade-in 0.7s ease-out forwards;
+    animation-delay: 0.3s;
     margin-bottom: 1.25rem; 
     font-weight: 600;
 }
 
 #home-content h1 span {
+    opacity: 0; 
+    animation: simple-fade-in 0.7s ease-out forwards;
+    animation-delay: 0.6s;
     color: rgb(231, 101, 45);
 }
 
 #home-content p {
+    opacity: 0; 
+    animation: simple-fade-in 0.8s ease-out forwards;
+    animation-delay: 0.9s;
     max-width: 700px;
     color: #444;
 }
 
 .contact-btn{
+    opacity: 0; 
+    animation: simple-fade-in 0.8s ease-out forwards;
+    animation-delay: 1.1s;
     display: inline-block;
     padding: 0.6rem 0.9rem; 
     margin-top: 1.5rem; 
@@ -156,12 +183,25 @@ header {
     text-align: center;
 }
 
-
 .value-card {
     display: flex;
     flex-direction: column;
     gap: 0.75rem; 
     align-items: center;
+    opacity: 0;
+    animation: fadeInSlideUp 0.7s ease-out forwards;
+}
+
+.values-grid .value-card:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+.values-grid .value-card:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.values-grid .value-card:nth-child(3) {
+    animation-delay: 1.8s;
 }
 
 .value-card img {
@@ -184,8 +224,11 @@ header {
 }
 
 .project-preview {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 2s;
     max-width: 1200px;
-    margin: 2.5rem auto; 
+    margin: auto; 
     padding: 0 20px;
     padding-bottom: 3rem; 
 }
@@ -275,6 +318,9 @@ header {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 1.5rem;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 
@@ -331,6 +377,12 @@ header {
     text-align: center;
 }
 
+#timeline {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
 .timeline-card {
     background-color: white;
     border-radius: 10px;
@@ -354,14 +406,19 @@ header {
     margin: 0 0 0.8rem 0; 
 }
 
+#my-skills {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
 
-#my-skills, #education, #timeline {
+#my-skills, #timeline {
     max-width: 1200px;
     margin: 0 auto 3.5rem; 
     padding: 0 20px;
 }
 
-#my-skills .section-title, #education .section-title, #timeline .section-title {
+#my-skills .section-title, #timeline .section-title {
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -388,6 +445,11 @@ header {
     width: 100%
 }
 
+#full-projects {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
 
 #full-projects p {
     margin-bottom: 2rem;
@@ -446,29 +508,19 @@ header {
     
 }
 
-.education-card {
-    background-color: white;
-    border-left: 3px solid rgb(239, 116, 89); 
-    border-radius: 4px;
-    padding: 0.8rem 1.2rem; 
-    margin-bottom: 1.2rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
-
-.education-card h3 {
-    margin-bottom: 0.2rem;
-}
-
-.education-card p {
-    color: #6a6a6a;
-    margin-bottom: 0;
-}
 
 footer {
     background-color:white;
     padding: 25px 20px;
     border: 1px solid rgb(222, 222, 222);
     text-align: center;
+    margin-top: auto;
+}
+
+#contact-content {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 .footer-content {
@@ -483,6 +535,9 @@ footer {
 }
 
 .form-container {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
     width: 300px;
     max-width: 90%;
     margin-bottom: 15px;
@@ -523,6 +578,31 @@ footer {
     font-size: 0.9rem;
 }
 
+.form-container button:hover {
+    background-color: rgb(210, 144, 115);
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    outline: none;
+    border-color: rgb(231, 154, 121);
+    box-shadow: 0 0 5px rgba(231, 154, 121, 0.5);
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 20px; 
+    color: rgb(36, 18, 9);
+    font-weight: 500;
+}
+
+.contact-intro {
+    max-width: 500px;
+    margin: 0 auto 40px auto;     
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
 .icon-container {
     display: flex;
     gap: 15px;
@@ -540,12 +620,10 @@ footer {
     color: rgb(231, 154, 121);
 }
 
-footer p {
+footer p, a {
     font-size: 0.75em;
-    opacity: 0.8;
     color: rgb(36, 18, 9);
 }
-
 
 @media (min-width: 768px) { 
 
