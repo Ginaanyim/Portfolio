@@ -280,7 +280,7 @@ header {
 }
 
 .project-card:hover h3 {
-    color: rgb(182, 93, 55);
+    color: rgb(201, 105, 63);
 }
 
 
@@ -523,6 +523,10 @@ footer {
     animation-delay: 0.2s;
 }
 
+#thank-you-content {
+    margin-top: 60px; 
+}
+
 .footer-content {
     display: flex;
     justify-content: center;
@@ -623,6 +627,10 @@ footer {
 footer p, a {
     font-size: 0.75em;
     color: rgb(36, 18, 9);
+}
+
+footer a {
+    color: rgb(101, 104, 178);
 }
 
 @media (min-width: 768px) { 
