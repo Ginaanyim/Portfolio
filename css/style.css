@@ -14,55 +14,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    color: rgb(36, 18, 9);
-    background: white;
-    line-height: 1.6;
-    padding-top: 30px;
-}
-
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif; 
-    color: rgb(36, 18, 9);
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-}
-
-h1 {
-    font-size: 1.5rem; 
-}
-
-h2 {
-    font-size: 1.25rem; 
-}
-
-h3 {
-    font-size: 1.1rem; 
-}
-
-p {
-    font-size: 0.95rem; 
-    margin-bottom: 1rem; 
-}
-
-.no-margin {
-    margin: 0;
-}
-
-section, footer {
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 header {
     position: fixed;
     top: 0;
@@ -109,11 +60,60 @@ header {
     color:rgb(239, 116, 89);
 }
 
+body {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(36, 18, 9);
+    background: white;
+    line-height: 1.6;
+    padding-top: 6rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; 
+    color: rgb(36, 18, 9);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 1.5rem; 
+}
+
+h2 {
+    font-size: 1.25rem; 
+    
+}
+
+h3 {
+    font-size: 1.1rem; 
+}
+
+p {
+    font-size: 0.95rem; 
+    margin-bottom: 1rem; 
+}
+
+.no-margin {
+    margin: 0;
+}
+
+section, footer {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #home-content{
     height: auto;
     min-height: 45vh;
-    margin: 2rem 0 3rem; 
-    padding: 2.5rem 20px; 
+    margin: -2.5rem auto 3rem auto;    
+    padding: 4rem 20px; 
     background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
     border: 0.5px solid rgb(222, 222, 222);
     display: flex;
@@ -306,11 +306,6 @@ header {
 #see-all-btn:hover {
     border: 1px solid rgb(239, 116, 89);
     color: rgb(182, 93, 55);
-}
-
-.page-header-container {
-    margin: 3.5rem 0 0.8rem 0;     
-    padding: 0 20px;
 }
 
 .about-grid {
