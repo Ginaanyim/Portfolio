@@ -27,7 +27,7 @@ header {
 }
 
 .nav {
-    padding: 0 10px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +89,7 @@ h2 {
 
 h3 {
     font-size: 1.1rem; 
+    /*color: rgb(201, 105, 63);*/
 }
 
 p {
@@ -113,9 +114,9 @@ a {
     height: auto;
     min-height: 45vh;
     margin: -2.5rem auto 3rem auto;    
-    padding: 4rem 20px; 
+    padding: 3rem 1.25rem; 
     background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
-    border: 0.5px solid rgb(222, 222, 222);
+    border: 1px solid rgb(222, 222, 222);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,7 +171,7 @@ a {
 
 #core-values {
     margin: 1rem auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     border-bottom: 1px solid #eee; 
     padding-bottom: 3rem; 
 }
@@ -224,13 +225,16 @@ a {
 }
 
 .project-preview {
-    opacity: 0;
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 2s;
     max-width: 1200px;
     margin: auto; 
-    padding: 0 20px;
+    padding: 0 1.25rem;
     padding-bottom: 3rem; 
+}
+
+.project-preview p {
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 .project-preview h2 {
@@ -242,6 +246,9 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem; 
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.4s;
 
 }
 
@@ -251,12 +258,16 @@ a {
     padding: 0.8rem; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     overflow: hidden;
+    /*La till en transparent kantlinje sp, reserveras utrymmet runt kortet, förhindrar att kortet växer och hoppar vid hovring.*/
+    border: 1px solid transparent; 
+    transition: border 0.3s ease, box-shadow 0.3s ease;
     
 }
 
 .project-card:hover {
     border: 1px solid rgb(255, 169, 132);
-    padding: 0.75rem; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    padding: 0.8rem;
 }
 
 
@@ -308,19 +319,125 @@ a {
     color: rgb(182, 93, 55);
 }
 
-.about-grid {
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 1.5rem;
+
+.back-link:hover{
+    color: rgb(201, 105, 63);
+}
+
+.project-detail-header, 
+.project-media-placeholder,
+.project-info-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px; 
+    padding: 0 1rem;
+}
+
+.project-detail-header {
+    margin-bottom: 2rem;
+}
+
+.project-detail-header h1 {
+    margin-top: 0.5rem;
+}
+
+
+
+.project-detail-header .github-badge {
+    background-color:transparent;
+    color: rgb(61, 28, 11);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 10px;
+}
+
+.project-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.2s;
 }
 
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-project,
+.technologies,
+.links-card {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03)
+}
+
+.project-media-placeholder {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem; 
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    background-color: transparent; 
+    height: auto; 
+    border-radius: 8px;
+    opacity: 0; 
+    animation: fadeInSlideUp 0.7s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.project-media-placeholder img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+    padding: 0; 
+    background-color: transparent; 
+    margin-top: 0; 
+    border-radius: 6px; 
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about-project ul {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.about-project ul li {
+    margin-bottom: 0.5rem; 
+    line-height: 1.5;
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.links-list a:hover{
+    color: rgb(201, 105, 63);
+}
+
+.about-grid {
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+}
+
 
 .about-text {
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
+    opacity: 0;
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 .about-image {
@@ -410,7 +527,7 @@ a {
 #my-skills, #timeline {
     max-width: 1200px;
     margin: 0 auto 3.5rem; 
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 #my-skills .section-title, #timeline .section-title {
@@ -440,11 +557,6 @@ a {
     width: 100%
 }
 
-#full-projects {
-    opacity: 0;
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 0.2s;
-}
 
 #full-projects p {
     margin-bottom: 2rem;
@@ -503,13 +615,12 @@ a {
     
 }
 
-
 footer {
     background-color:white;
-    padding: 25px 20px;
+    padding: 1.5rem, 1.25rem;
     border: 1px solid rgb(222, 222, 222);
     text-align: center;
-    margin-top: auto;
+    padding: 2rem 0rem;
 }
 
 #contact-content {
@@ -519,7 +630,7 @@ footer {
 }
 
 #thank-you-content {
-    margin-top: 60px; 
+    margin-top: 4rem; 
 }
 
 .footer-content {
@@ -537,7 +648,7 @@ footer {
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.2s;
-    width: 300px;
+    width: 20rem;
     max-width: 90%;
     margin-bottom: 15px;
     margin-left: auto;
@@ -596,10 +707,10 @@ footer {
 
 .contact-intro {
     max-width: 500px;
-    margin: 0 auto 40px auto;     
+    margin: 0 auto 2.5rem auto;     
     text-align: center;
     font-size: 1rem;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .icon-container {
@@ -681,24 +792,80 @@ footer a {
 
     .skills-grid {
         display: grid;
-        grid-template-columns:repeat(2, 2fr);
+        grid-template-columns:repeat(2, 1fr);
         gap: 1.2rem;
     }
 
     .timeline-grid {
         display: grid;
-        grid-template-columns:repeat(4, 4fr);
+        grid-template-columns:repeat(4, 1fr);
         gap: 1.2rem;
+    }
+
+    .project-info-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .project-media-placeholder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+        gap: 1.5rem;         
+    }
+    
+    .project-media-placeholder img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;    
     }
 
 }
 
-
 @media (min-width: 1024px) {
+    
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
     #home-content h1 {
-        font-size: 3.2rem; 
+        font-size: 3.8rem;
+    }
+
+    section, footer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .nav {
+        padding: 0 50px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .project-detail-header,
+    .project-info-container {
+        padding: 0 50px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2rem;
+    }
+
+    .project-info-container {
+        gap: 4rem;
+    }
+
+    .project-media-placeholder {
+        gap: 2rem;
     }
 }
