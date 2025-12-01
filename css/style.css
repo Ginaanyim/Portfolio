@@ -1,3 +1,4 @@
+/* Animations for effects when reloading*/
 @keyframes fadeInSlideUp {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -8,12 +9,15 @@
     100% { opacity: 1; }
 }
 
+/*-------------STANDARD CODE-----------*/
 
+/*Global reset*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -100,7 +104,7 @@ p {
     margin: 0;
 }
 
-/*För flytta ner footern*/
+/*TPlace the footer at the bottom (contact.html)*/
 section {
     flex-grow: 1;
 }
@@ -111,13 +115,15 @@ section, footer {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color:rgb(36, 18, 9);
 }
+
+/*-----------Homepage (index-html)-----------*/
 
 #home-content{
     max-width: 100%;
     height: auto;
-    margin: -2.5rem auto 3rem auto;    
+    margin: -2.5rem auto 3rem auto; /*negativ margin to psuh down content from under sticker header*/
     padding: 3rem 1.25rem; 
     background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
     border: 1px solid rgb(222, 222, 222);
@@ -196,6 +202,8 @@ a {
     animation: fadeInSlideUp 0.7s ease-out forwards;
 }
 
+/* This selector picks each value-card in .values-grid by its position (1, 2, 3)
+   so i can add animations to them in order*/
 .values-grid .value-card:nth-child(1) {
     animation-delay: 1.2s;
 }
@@ -227,7 +235,29 @@ a {
     line-height: 1.5;
 }
 
-.project-preview {
+ #see-all-btn {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 2rem auto 0 auto;
+    padding: 0.5rem 0.5rem; 
+    border: 1px solid rgb(168, 168, 168);
+    color: rgb(87, 87, 87);
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.7rem;
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+#see-all-btn:hover {
+    border: 1px solid rgb(239, 116, 89);
+    color: rgb(182, 93, 55);
+}
+
+ /*---------Project-page---------*/
+
+ .project-preview {
     max-width: 1200px;
     margin: auto; 
     padding: 0 1.25rem;
@@ -252,7 +282,6 @@ a {
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.4s;
-
 }
 
 .project-card{
@@ -261,10 +290,10 @@ a {
     padding: 0.8rem; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     overflow: hidden;
-    /*La till en transparent kantlinje sp, reserveras utrymmet runt kortet, förhindrar att kortet växer och hoppar vid hovring.*/
-    border: 1px solid transparent; 
+/* Added a transparent border so space is reserved around the card.
+   This prevents the card from growing and jumping when hovered*/
+   border: 1px solid transparent; 
     transition: border 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .project-card:hover {
@@ -272,7 +301,6 @@ a {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
     padding: 0.8rem;
 }
-
 
 .project-card img {
     width: 100%;
@@ -287,7 +315,6 @@ a {
     transform: scale(1.1);
 }
 
-
 .project-card h3 {
     margin-bottom: 0.4rem;
     transition: color 0.3s ease;
@@ -297,30 +324,22 @@ a {
     color: rgb(201, 105, 63);
 }
 
-
 .project-card p {
     color: #444;
 }
 
-#see-all-btn {
-    display: block;
-    margin: 2rem auto 0 auto;
-    padding: 0.5rem 0.5rem; 
-    border: 1px solid rgb(168, 168, 168);
-    color: rgb(87, 87, 87);
-    border-radius: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 0.7rem;
-    max-width: 150px;
-    transition: transform 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+#full-projects p {
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#see-all-btn:hover {
-    border: 1px solid rgb(239, 116, 89);
-    color: rgb(182, 93, 55);
+#projects-p{
+text-align: center;
 }
+
+/*---------Project-detail-page--------*/
 
 .back-link {
     font-size: 0.8rem;
@@ -328,6 +347,13 @@ a {
 
 .back-link:hover{
     color: rgb(201, 105, 63);
+}
+
+.project-detail-header .github-badge {
+    background-color: transparent;
+    color: rgb(61, 28, 11);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 10px;
 }
 
 .project-detail-header, 
@@ -346,15 +372,6 @@ a {
 
 .project-detail-header h1 {
     margin-top: 0.5rem;
-}
-
-
-
-.project-detail-header .github-badge {
-    background-color:transparent;
-    color: rgb(61, 28, 11);
-    border: 1px solid rgb(199, 199, 199);
-    border-radius: 10px;
 }
 
 .project-info-container{
@@ -431,13 +448,15 @@ a {
     color: rgb(201, 105, 63);
 }
 
+
+/*---------About-page---------*/
+
 .about-grid {
     padding: 0 1.25rem;
     display: grid;
     grid-template-columns: 1fr; 
     gap: 1.5rem;
 }
-
 
 .about-text {
     padding: 2rem 1rem;
@@ -563,18 +582,6 @@ a {
     width: 100%
 }
 
-
-#full-projects p {
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#projects-p{
-text-align: center;
-}
-
 .skill-header {
     display: flex;
     align-items: center;
@@ -620,17 +627,14 @@ text-align: center;
 
 .skill-badge:hover {
     transform: scale(1.05);
-    
 }
+
+/*--------Contact-page--------*/
 
 #contact-content {
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.2s;
-}
-
-#thank-you-content {
-    margin-top: 4rem; 
 }
 
 .form-container {
@@ -702,6 +706,12 @@ text-align: center;
     padding: 0 1.25rem;
 }
 
+#thank-you-content {
+    margin-top: 4rem; 
+}
+
+/*--------Footer-------*/
+
 footer {
     background-color:white;
     border-top: 1px solid rgb(222, 222, 222);
@@ -737,6 +747,9 @@ footer p, .link-footer {
 .icon-container .icon i:hover, .fa-linkedin-in:hover {
     color: rgb(231, 154, 121);
 }
+
+
+/*-----------Media query (Ipad size)----------*/
 
 @media (min-width: 600px) { 
 
@@ -841,6 +854,9 @@ footer p, .link-footer {
 
 }
 
+/*-----------Media query (Bigger Ipad/desktop size)----------*/
+
+
 @media (min-width: 1024px) {
 
     section, footer {
@@ -934,6 +950,8 @@ footer p, .link-footer {
     }
     
 }
+
+/*-----------Media query (Desktop size)----------*/
 
 @media (min-width: 1440px){
 

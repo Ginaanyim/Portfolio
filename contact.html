@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
     <title>Portfolio | Contact</title>
 </head>
 <body>
+    <!--Header with navigation-menu and clickable logo-->
     <header>
         <nav class="nav">
             <a href="index.html" class="logo">Portfolio.</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!--Introduction text-->
     <section id="contact-content">
         <h1 class="section-title contact-title">Get in Touch</h1>
         <p class="contact-intro">
             I am open to new job opportunities and projects. 
             Feel free to reach out with any questions or to say hello!
         </p>
-        
+    
+        <!--Contact Form-->
         <div class="form-container">
-            
             <form action="thank-you.html"> 
                 <label for ="name">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>  
@@ -48,11 +50,13 @@
         </div>
     </section>
 
+    <!--Footer text information-->
     <footer>
         <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
         <p class = "no-margin">ginaanyim@hotmail.com</p>
         <a href="#" class="link-footer">Privacy Policy</a>
 
+        <!--Social media icons-->
         <div class ="footer-content">
 
             <div class="icon-container">
@@ -60,11 +64,11 @@
                     <i class="fa-solid fa-envelope"></i>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" class="icon">
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="https://www.facebook.com" class="icon">
+                <a href="https://www.facebook.com" target="_blank" class="icon">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>

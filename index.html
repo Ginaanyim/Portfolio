@@ -2,30 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
     <title>Portfolio | Virginia Anyim</title>
 </head>
 <body>
+    <!--Header with navigation-menu and clickable logo-->
     <header>
         <nav class="nav">
             <a href="index.html" class="logo">Portfolio.</a>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!--Section with gradient background and little about med-->
         <section id="home-content">
             <h1>Hi, I am <br><span>Virginia Anyim</span></h1>
             <p id ="home-p">I like mixing creativity with code to bring ideas to life. I make things for the web and have fun doing it. I'm always experimenting, learning new tricks, and finding better ways to build cool, simple, and user-friendly experiences. Take a look around—there’s plenty more to come.</p>
             <a href="contact.html" class ="contact-btn">Get In Touch</a>
         </section>
 
+        <!--Section with my core values-->
         <section id="core-values">
             <div class="values-grid">
 
@@ -49,6 +53,7 @@
             </div>
         </section>
 
+        <!--Section with preview of my projects-->
         <section class="project-preview" id ="project-preview-index">
             <h2>Preview of projects</h2>
             <div class="project-grid">
@@ -85,28 +90,30 @@
             </div>
             <a href="projects.html" id="see-all-btn">See all projects</a>
         </section>
-        <footer>
 
-            <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
-            <p class = "no-margin">ginaanyim@hotmail.com</p>
-            <a href="#" class="link-footer">Privacy Policy</a>
-    
-            <div class ="footer-content">
-    
-                <div class="icon-container">
-                    <a href="mailto:ginaanyim@hotmail.com" class="icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" class="icon">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-    
-                    <a href="https://www.facebook.com" class="icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </div>
+    <!--Footer text information-->
+    <footer>
+        <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
+        <p class = "no-margin">ginaanyim@hotmail.com</p>
+        <a href="#" class="link-footer">Privacy Policy</a>
+        
+        <!--Social media icons-->
+        <div class ="footer-content">
+
+            <div class="icon-container">
+                <a href="mailto:ginaanyim@hotmail.com" class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.facebook.com" target="_blank" class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 </html>

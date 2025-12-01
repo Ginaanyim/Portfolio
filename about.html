@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
     <title>Portfolio | About Virginia Anyim</title>
 </head>
 <body>
+    <!--Header with navigation-menu and clickable logo-->
     <header>
         <nav class="nav">
             <a href="index.html" class="logo">Portfolio.</a>
@@ -22,6 +21,8 @@
             </ul>
         </nav>
     </header>
+
+    <!--Section with image, scentence and icons with links-->
     <section class="about-grid">
         <aside class="about-image">
             <img src="images/portrait.jpg" alt="Portrait of Virginia Anyim">
@@ -30,22 +31,24 @@
 
             <ul class="social-icons">
                 <li>
-                    <a href="https://github.com/Ginaanyim">
+                    <a href="https://github.com/Ginaanyim" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i> </a>
                 </li>
                 <li>
-                    <a href ="https://www.linkedin.com/in/virginia-anyim-9443831ba/">
+                    <a href ="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank">
                         <i class="fab fa-linkedin-in" aria-hidden="true"></i> </a>
                 </li>
             </ul>
         </aside>
         
+        <!--Section with text about me-->
         <article class="about-text">
             <h1>Who am I?</h1>
             <p>I’m Virginia Anyim, a 24-year-old web developer with a background in Computer and Systems Sciences. I’ve always been a creative person—painting, photography, and digital art were a big part of my life growing up. Today, that creativity has naturally shifted into my passion for frontend development and design. I love building clean, intuitive, and visually appealing interfaces, while also exploring the backend side of things to understand how everything fits together.</p>
         </article>
     </section>
 
+    <!--Section showing my timeline of events-->
     <section id ="timeline">
         <h2 class="section-title">My Journey</h2>
         <div class ="timeline-grid">
@@ -69,6 +72,7 @@
         </div>
     </section>
 
+    <!--Section showing and rating my skills-->
     <section id="my-skills">
         <h2 class="section-title">My Skills</h2>  
         <div class="skills-grid">
@@ -138,16 +142,16 @@
                     <li class="skill-badge">Canva</li>
                 </ul>
             </article>
-            
         </div>
     </section>
 
+    <!--Footer text information-->
     <footer>
-
         <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
         <p class = "no-margin">ginaanyim@hotmail.com</p>
         <a href="#" class="link-footer">Privacy Policy</a>
 
+        <!--Social media icons-->
         <div class ="footer-content">
 
             <div class="icon-container">
@@ -155,11 +159,11 @@
                     <i class="fa-solid fa-envelope"></i>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" class="icon">
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="https://www.facebook.com" class="icon">
+                <a href="https://www.facebook.com" target="_blank" class="icon">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>

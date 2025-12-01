@@ -2,43 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
     <title>Portfolio | Coffee Shop E-commerce</title>
 </head>
 <body>
+    <!--Header with navigation-menu and clickable logo-->
     <header>
         <nav class="nav">
             <a href="index.html" class="logo">Portfolio.</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!--Section which presents header of project detail page-->
     <section class ="project-detail-header">
         <a href="projects.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i> Back to projects
         </a>
-
         <h1>Ambessa Coffee Shop</h1>
-
+        
         <div class="project-badge">
             <a href="#" target="_blank" class="skill-badge github-badge">
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
         </div>
-        </section>
+    </section>
 
+    <!--Section with media (images) for specific project-->
     <section class="project-media-placeholder">
         <img src = "images/coffee-website-computer.png" alt="Coffee Shop E-commerce Website Preview">
         <img src = "images/coffee-website-products.png" alt="Coffee Shop E-commerce Website Preview">
@@ -46,11 +44,11 @@
         <img src = "images/coffee-website-login.png" alt ="Coffee Shop E-commerce Website Preview">
     </section>
 
+    <!--Section with description of project-->
     <section class="project-info-container"> 
         <div class="about-project">
             <h2>Project Description</h2>
             <p>Ambessa Coffee Shop is a full-stack e-commerce solution I developed using HTML, CSS, JavaScript and PHP for backend processing. The website is fully responsive and designed to handle complete sales workflows.</p>
-    
             <p>This application relies on an SQL database that manages all critical data, including:</p>
     
             <ul>
@@ -63,6 +61,7 @@
                 <p> I tackeled challenges with PHP, particularly ensuring secure SQL database interactions and session management, which was a great opportunity to deepen my understanding of server-side logic.</p>        
         </div>
     
+        <!--Sidebar with used technologies-->
         <div class="info-sidebar"> 
             <div class="technologies">
                 <h3>Technologies Used</h3>
@@ -75,6 +74,7 @@
                 </ul>
             </div>
     
+            <!--Small card with links for project-->
             <div class="links-card">
                 <h3>Links</h3>
                 <ul class="links-list">
@@ -86,11 +86,13 @@
         </div>
     </section>
 
+    <!--Footer text information-->
     <footer>
         <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
         <p class = "no-margin">ginaanyim@hotmail.com</p>
         <a href="#" class="link-footer">Privacy Policy</a>
 
+        <!--Social media icons-->
         <div class ="footer-content">
 
             <div class="icon-container">
@@ -98,11 +100,11 @@
                     <i class="fa-solid fa-envelope"></i>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" class="icon">
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="https://www.facebook.com" class="icon">
+                <a href="https://www.facebook.com" target="_blank" class="icon">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>

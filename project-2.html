@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
     
     <title>Portfolio | Dog Registry Program</title>
 </head>
 <body>
+    <!--Header with navigation-menu and clickable logo-->
     <header>
         <nav class="nav">
             <a href="index.html" class="logo">Portfolio.</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!--Section which presents header of project detail page-->
     <section class ="project-detail-header">
         <a href="projects.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i> Back to projects
@@ -39,14 +38,15 @@
         </div>
     </section>
 
+    <!--Section with description of project-->
     <section class="project-info-container">
-    
         <div class="about-project">
             <h2>Project Description</h2>
             <p>This was a Java project where I built a straightforward console-based dog registry system. The primary goal was to demonstrate my ability to work with Object-Oriented Programming (OOP). I designed classes for both Dogs and Owners, ensuring the use of encapsulation to protect data integrity. The most challenging aspect was ensuring the system had a clear structure and that the relationships between the dogs and their owners (e.g., adding, removing, listing) functioned smoothly.</p>      
             <p> This project served as an excellent way to strengthen my core Java knowledge and writing well-organized code.</p>
         </div>
     
+        <!--Sidebar with used technologies-->
         <div class="info-sidebar"> 
             <div class="technologies">
                 <h3>Technologies Used</h3>
@@ -54,7 +54,8 @@
                     <li class="skill-badge">JAVA</li>
                 </ul>
             </div>
-    
+            
+            <!--Small card with links for project-->
             <div class="links-card">
                 <h3>Links</h3>
                 <ul class="links-list">
@@ -66,11 +67,13 @@
         </div>
     </section>
 
+    <!--Footer text information-->
     <footer>
         <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
         <p class = "no-margin">ginaanyim@hotmail.com</p>
         <a href="#" class="link-footer">Privacy Policy</a>
-
+        
+        <!--Social media icons-->
         <div class ="footer-content">
 
             <div class="icon-container">
@@ -78,11 +81,11 @@
                     <i class="fa-solid fa-envelope"></i>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" class="icon">
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
 
-                <a href="https://www.facebook.com" class="icon">
+                <a href="https://www.facebook.com" target="_blank" class="icon">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
             </div>
