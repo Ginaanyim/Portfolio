@@ -89,7 +89,6 @@ h2 {
 
 h3 {
     font-size: 1.1rem; 
-    /*color: rgb(201, 105, 63);*/
 }
 
 p {
@@ -99,6 +98,11 @@ p {
 
 .no-margin {
     margin: 0;
+}
+
+/*För flytta ner footern*/
+section {
+    flex-grow: 1;
 }
 
 section, footer {
@@ -111,15 +115,14 @@ a {
 }
 
 #home-content{
+    max-width: 100%;
     height: auto;
-    min-height: 45vh;
     margin: -2.5rem auto 3rem auto;    
     padding: 3rem 1.25rem; 
     background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
     border: 1px solid rgb(222, 222, 222);
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 #home-content h1 {
@@ -319,6 +322,9 @@ a {
     color: rgb(182, 93, 55);
 }
 
+.back-link {
+    font-size: 0.8rem;
+}
 
 .back-link:hover{
     color: rgb(201, 105, 63);
@@ -381,7 +387,7 @@ a {
     flex-direction: column; 
     gap: 1.5rem; 
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
@@ -563,7 +569,10 @@ a {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
 
+#projects-p{
+text-align: center;
 }
 
 .skill-header {
@@ -573,12 +582,11 @@ a {
 }
 
 .skill-rating {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 0;
 }
 
 .skill-rating .fa-star {
-    margin: 0 1px;
     color: rgba(255, 203, 134, 0.86);
 }
 
@@ -615,14 +623,6 @@ a {
     
 }
 
-footer {
-    background-color:white;
-    padding: 1.5rem, 1.25rem;
-    border: 1px solid rgb(222, 222, 222);
-    text-align: center;
-    padding: 2rem 0rem;
-}
-
 #contact-content {
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
@@ -631,17 +631,6 @@ footer {
 
 #thank-you-content {
     margin-top: 4rem; 
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 15px;
-    flex-wrap: wrap; 
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .form-container {
@@ -666,7 +655,7 @@ footer {
 
 .form-container textarea,
 .form-container input {
-    padding: 10px;
+    padding: 0.7rem;
     margin-bottom: 8px;
     border: 1px solid rgb(208, 208, 208);
     border-radius: 4px;
@@ -679,7 +668,7 @@ footer {
     background-color: rgb(231, 154, 121); 
     color: white;
     margin: 0.5rem 0 2rem 0;
-    padding: 8px 20px;
+    padding: 0.5rem 1.25rem;
     width: 100%;
     border: none;
     border-radius: 4px;
@@ -713,36 +702,46 @@ footer {
     padding: 0 1.25rem;
 }
 
+footer {
+    background-color:white;
+    border-top: 1px solid rgb(222, 222, 222);
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+
+footer p, .link-footer {
+    font-size: 0.75em;
+    color: rgb(36, 18, 9);
+    margin-bottom: 0.5rem; 
+
+}
+
+.link-footer {
+    color: rgb(101, 104, 178);
+    margin-bottom: 0.5rem; 
+}
+
 .icon-container {
     display: flex;
     gap: 15px;
-    padding-bottom: 10px;
     justify-content: center;
     width: 100%;
 }
 
 .icon-container .icon i {
     font-size: 24px;
-    color: rgb(162, 162, 162);
+    color: rgb(142, 142, 142);
 }
 
 .icon-container .icon i:hover, .fa-linkedin-in:hover {
     color: rgb(231, 154, 121);
 }
 
-footer p, a {
-    font-size: 0.75em;
-    color: rgb(36, 18, 9);
-}
-
-footer a {
-    color: rgb(101, 104, 178);
-}
-
-@media (min-width: 768px) { 
+@media (min-width: 600px) { 
 
     .nav {
-        padding: 0 30px;
+        padding: 0 1.8rem;
     }
 
     .nav .logo {
@@ -765,10 +764,6 @@ footer a {
         font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1.2rem;
-    }
-    
     .values-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -821,16 +816,32 @@ footer a {
         object-fit: contain;    
     }
 
+    footer {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 2rem 1.8rem; 
+        text-align: left; 
+    }
+
+    footer p, .link-footer {
+        display: block; 
+        text-align: left;
+        max-width: 60%; 
+        margin: 0.2rem 0;
+        font-size: 0.8rem;
+    }
+    
+    .icon-container {
+        justify-content: flex-end;
+        width: auto; 
+        padding-bottom: 0;
+    }
+
 }
 
 @media (min-width: 1024px) {
-    
-    .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #home-content h1 {
-        font-size: 3.8rem;
-    }
 
     section, footer {
         max-width: 1200px;
@@ -838,10 +849,43 @@ footer a {
         margin-right: auto;
     }
     
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #home-content {
+        width: 100%;
+    }
+
+    #home-content h1, #home-p {
+        max-width: 1200px; 
+        margin-left: 5rem;
+    }
+
+    .contact-btn {
+        margin-left: 5rem;
+    }
+
+    #home-content h1 {
+        font-size: 3rem;
+    }
+    
     .nav {
-        padding: 0 50px;
+        padding: 0 3rem;
         max-width: 1200px;
         margin: auto;
+    }
+
+    .nav .logo {
+        font-size: 1.4rem; 
+    }
+
+    .nav ul a { 
+        font-size: 1rem;
+    }
+
+    .nav ul {
+        gap: 2rem;
     }
 
     h1 {
@@ -851,14 +895,23 @@ footer a {
         font-size: 1.75rem;
     }
 
+    p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
     .project-detail-header,
     .project-info-container {
-        padding: 0 50px;
+        padding: 0 3rem;
     }
 
     .skills-grid {
         grid-template-columns: repeat(3, 1fr); 
         gap: 2rem;
+    }
+
+    #full-projects p {
+        max-width: 800px;
     }
 
     .project-info-container {
@@ -867,5 +920,29 @@ footer a {
 
     .project-media-placeholder {
         gap: 2rem;
+    }
+
+    footer {
+        max-width: 1200px; 
+        padding: 2rem 1rem; 
+    }
+
+    footer p, .link-footer {
+        max-width: none; 
+        width: auto;
+        display: block; 
+    }
+    
+}
+
+@media (min-width: 1440px){
+
+    #home-content h1, #home-p {
+        max-width: 1200px; 
+        margin-left: 10rem;
+    }
+
+    .contact-btn {
+        margin-left: 10rem;
     }
 }
