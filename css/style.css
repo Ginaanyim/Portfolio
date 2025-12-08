@@ -38,7 +38,7 @@ header {
 }
 
 .nav .logo{
-    font-size: 1rem; 
+    font-size: 0.95rem; 
     font-weight: 700;
     color: rgb(239, 116, 89);
     font-family: 'Open Sans', sans-serif;
@@ -51,7 +51,7 @@ header {
 }
 
 .nav ul a {
-    font-size: 0.85rem; 
+    font-size: 0.8rem;
     transition: color 0.3s ease;
 
 }
@@ -71,7 +71,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: rgb(36, 18, 9);
     background: white;
-    line-height: 1.6;
+    line-height: 1.6; 
     padding-top: 6rem;
 }
 
@@ -83,20 +83,20 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 1.5rem; 
+    font-size: 1.35rem; 
 }
 
 h2 {
-    font-size: 1.25rem; 
+    font-size: 1.15rem; 
     
 }
 
 h3 {
-    font-size: 1.1rem; 
+    font-size: 1rem; 
 }
 
 p {
-    font-size: 0.95rem; 
+    font-size: 0.9rem; 
     margin-bottom: 1rem; 
 }
 
@@ -104,7 +104,7 @@ p {
     margin: 0;
 }
 
-/*TPlace the footer at the bottom (contact.html)*/
+/*To place the footer at the bottom (contact.html)*/
 section {
     flex-grow: 1;
 }
@@ -123,7 +123,7 @@ a {
 #home-content{
     max-width: 100%;
     height: auto;
-    margin: -2.5rem auto 3rem auto; /*negativ margin to psuh down content from under sticker header*/
+    margin: -2.5rem auto 3rem auto; /*negativ margin to push down content from under sticker header*/
     padding: 3rem 1.25rem; 
     background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
     border: 1px solid rgb(222, 222, 222);
@@ -137,6 +137,7 @@ a {
     animation-delay: 0.3s;
     margin-bottom: 1.25rem; 
     font-weight: 600;
+    font-size: 1.4rem; 
 }
 
 #home-content h1 span {
@@ -150,8 +151,9 @@ a {
     opacity: 0; 
     animation: simple-fade-in 0.8s ease-out forwards;
     animation-delay: 0.9s;
-    max-width: 700px;
+    max-width: 650px;
     color: #444;
+    font-size: 0.9rem;
 }
 
 .contact-btn{
@@ -168,7 +170,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.8rem; 
     letter-spacing: 0.5px;
     transition: transform 0.5s ease;
     font-family: 'Poppins', sans-serif;
@@ -188,7 +190,7 @@ a {
 .values-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem; 
+    gap: 2rem; 
     justify-items: center; 
     text-align: center;
 }
@@ -227,30 +229,32 @@ a {
 .value-card h3 {
     font-weight: 600;
     color: #2b2b2b;
+    font-size: 1rem;
 }
 
 .value-card p {
     max-width: 260px;
     color: #6a6a6a;
     line-height: 1.5;
+    font-size: 0.85rem; 
 }
 
- #see-all-btn {
+ #view-all-btn {
     font-family: 'Poppins', sans-serif;
     display: block;
-    margin: 2rem auto 0 auto;
+    margin: 4rem auto 0 auto;
     padding: 0.5rem 0.5rem; 
     border: 1px solid rgb(168, 168, 168);
     color: rgb(87, 87, 87);
     border-radius: 30px;
     text-transform: uppercase;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     max-width: 150px;
     transition: transform 0.3s ease;
 }
 
-#see-all-btn:hover {
+#view-all-btn:hover {
     border: 1px solid rgb(239, 116, 89);
     color: rgb(182, 93, 55);
 }
@@ -258,7 +262,7 @@ a {
  /*---------Project-page---------*/
 
  .project-preview {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto; 
     padding: 0 1.25rem;
     padding-bottom: 3rem; 
@@ -268,6 +272,7 @@ a {
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.2s;
+    font-size: 0.9rem;
 }
 
 .project-preview h2 {
@@ -278,7 +283,8 @@ a {
 .project-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem; 
+    gap: 2rem; 
+    margin-top: 2rem;
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.4s;
@@ -318,6 +324,7 @@ a {
 .project-card h3 {
     margin-bottom: 0.4rem;
     transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
 .project-card:hover h3 {
@@ -326,16 +333,14 @@ a {
 
 .project-card p {
     color: #444;
-}
-
-#full-projects p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 0.85rem;
 }
 
 #projects-p{
-text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    text-align: center;
 }
 
 /*---------Project-detail-page--------*/
@@ -354,7 +359,7 @@ text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1000px; 
     padding: 0 1rem;
 }
 
@@ -363,6 +368,7 @@ text-align: center;
 }
 
 .project-detail-header h1 {
+    text-align: center;
     margin-top: 1.5rem;
 }
 
@@ -370,7 +376,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
     animation-delay: 0.2s;
@@ -396,10 +402,9 @@ text-align: center;
     flex-direction: column; 
     gap: 1.5rem; 
     width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4rem;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
     background-color: transparent; 
     height: auto; 
     border-radius: 8px;
@@ -412,12 +417,11 @@ text-align: center;
     width: 100%; 
     height: auto;
     display: block; 
-    padding: 0; 
     background-color: transparent; 
     margin-top: 0; 
     border-radius: 6px; 
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1,); 
 }
 
 .about-project ul {
@@ -428,12 +432,14 @@ text-align: center;
 
 .about-project ul li {
     margin-bottom: 0.5rem; 
-    line-height: 1.5;
+    line-height: 1.4;
+    font-size: 0.85rem;
 }
 
 .links-list {
     list-style: none;
     padding: 0;
+    font-size: 0.85rem;
 }
 
 .links-list a:hover{
@@ -451,6 +457,7 @@ text-align: center;
 }
 
 .about-text {
+    max-width: 600px;
     padding: 2rem 1rem;
     opacity: 0;
     animation: fadeInSlideUp 1s ease-out forwards;
@@ -477,6 +484,7 @@ text-align: center;
     font-style: italic;
     line-height: 1.4;
     margin: 0.5rem;
+    font-size: 0.85rem;
 }
 
 .social-icons {
@@ -487,7 +495,7 @@ text-align: center;
 }
 
 .social-icons a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: rgb(97, 53, 35);
     transition: color 0.3s ease;
 }
@@ -505,6 +513,7 @@ text-align: center;
 .section-subtitle {
     color: #896c50; 
     text-align: center;
+    font-size: 0.85rem;
 }
 
 #timeline {
@@ -529,7 +538,7 @@ text-align: center;
     display: inline-block; 
     background-color: rgb(134, 187, 211); 
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     padding: 0.3rem 0.8rem;
     border-radius: 8px;
@@ -543,7 +552,7 @@ text-align: center;
 }
 
 #my-skills, #timeline {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto 3.5rem; 
     padding: 0 1.25rem;
 }
@@ -579,10 +588,11 @@ text-align: center;
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    font-size: 0.95rem;
 }
 
 .skill-rating {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 0;
 }
 
@@ -595,8 +605,8 @@ text-align: center;
 }
 
 .skill-icon {
-    width: 2rem; 
-    height: 2rem;
+    width: 1.8rem; 
+    height: 1.8rem;
     object-fit: contain;
     margin-right: 0.8rem;
 }
@@ -611,7 +621,7 @@ text-align: center;
 .skill-badge {
     background-color: #ffcba5; 
     color: rgb(97, 53, 35);
-    font-size: 0.85rem; 
+    font-size: 0.75rem;
     padding: 0.4rem 0.8rem;
     border-radius: 15px;
     transition: transform 0.3s ease;
@@ -642,6 +652,7 @@ text-align: center;
 
 .form-container h3 {
     color: rgb(150, 113, 94);
+    font-size: 1rem;
 }
 
 .form-container form {
@@ -658,6 +669,7 @@ text-align: center;
     background-color: rgba(248, 248, 248, 0.9);
     width: 100%;
     box-sizing: border-box; 
+    font-size: 0.85rem;
 }
 
 .form-container button {
@@ -670,7 +682,7 @@ text-align: center;
     border-radius: 4px;
     cursor: pointer;
     align-self: center; 
-    font-size: 0.9rem;
+    font-size: 0.85rem; 
 }
 
 .form-container button:hover {
@@ -694,7 +706,7 @@ text-align: center;
     max-width: 500px;
     margin: 0 auto 2.5rem auto;     
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem; 
     padding: 0 1.25rem;
 }
 
@@ -713,7 +725,7 @@ footer {
 
 
 footer p, .link-footer {
-    font-size: 0.75em;
+    font-size: 0.7em;
     color: rgb(36, 18, 9);
     margin-bottom: 0.5rem; 
 
@@ -732,7 +744,7 @@ footer p, .link-footer {
 }
 
 .icon-container .icon i {
-    font-size: 24px;
+    font-size: 20px;
     color: rgb(142, 142, 142);
 }
 
@@ -750,7 +762,7 @@ footer p, .link-footer {
     }
 
     .nav .logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .nav ul {
@@ -758,15 +770,11 @@ footer p, .link-footer {
     }
 
     .nav ul a {
-        font-size: 0.95rem; 
+        font-size: 0.85rem; 
     }
 
     #home-content h1 {
-        font-size: 2.5rem; 
-    }
-    
-    h2 {
-        font-size: 1.5rem;
+        font-size: 2rem; 
     }
 
     .values-grid {
@@ -835,7 +843,7 @@ footer p, .link-footer {
         text-align: left;
         max-width: 60%; 
         margin: 0.2rem 0;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     .icon-container {
@@ -850,9 +858,9 @@ footer p, .link-footer {
 
 
 @media (min-width: 1024px) {
-
+    
     section, footer {
-        max-width: 1200px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -863,21 +871,21 @@ footer p, .link-footer {
 
     #home-content {
         width: 100%;
+        padding: 3.5rem 2.5rem; 
     }
 
     #home-content h1, #home-p {
-        max-width: 1200px; 
         margin-left: 5rem;
+    }
+
+    #home-content h1 {
+        font-size: 2.3rem; 
     }
 
     .contact-btn {
         margin-left: 5rem;
     }
 
-    #home-content h1 {
-        font-size: 3rem;
-    }
-    
     .nav {
         padding: 0 3rem;
         max-width: 1200px;
@@ -885,11 +893,11 @@ footer p, .link-footer {
     }
 
     .nav .logo {
-        font-size: 1.4rem; 
+        font-size: 1.3rem; 
     }
 
     .nav ul a { 
-        font-size: 1rem;
+        font-size: 0.85rem; 
     }
 
     .nav ul {
@@ -897,15 +905,19 @@ footer p, .link-footer {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.6rem; 
     }
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.35rem;
     }
 
     p {
-        font-size: 1.05rem;
-        line-height: 1.8;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    #projects-p{
+        max-width: 600px;
     }
 
     .project-detail-header,
@@ -916,10 +928,6 @@ footer p, .link-footer {
     .skills-grid {
         grid-template-columns: repeat(3, 1fr); 
         gap: 2rem;
-    }
-
-    #full-projects p {
-        max-width: 800px;
     }
 
     .project-info-container {
@@ -947,12 +955,8 @@ footer p, .link-footer {
 
 @media (min-width: 1440px){
 
-    #home-content h1, #home-p {
-        max-width: 1200px; 
-        margin-left: 10rem;
+    #home-content {
+        padding: 5rem 6rem; 
     }
 
-    .contact-btn {
-        margin-left: 10rem;
-    }
 }
