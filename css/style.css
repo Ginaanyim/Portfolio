@@ -752,6 +752,19 @@ footer p, .link-footer {
     color: rgb(231, 154, 121);
 }
 
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.char-counter {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #333;
+}
+
 
 /*-----------Media query (Ipad size)----------*/
 
