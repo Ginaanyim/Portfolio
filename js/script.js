@@ -24,14 +24,18 @@ contactForm.addEventListener('submit', function(event){
 
     const emailValue = emailInput.value;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const messageLength = messageInput.value.length;
 
     if (!emailPattern.test(emailValue)) {
         event.preventDefault();
         emailError.textContent = "Please enter a valid email address.";
-
         emailError.style.display = "block";
-        
         emailInput.style.borderColor = "red";
+    } else if (messageLength < 20){
+        event.preventDefault();
+        charCount.style.display = "block";
+        charCount.style.color = "red";
+        emailError.style.display = "none";
     } else {
         emailError.style.display = "none";
         emailInput.style.borderColor = "";
