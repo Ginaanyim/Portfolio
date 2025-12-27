@@ -11,4 +11,12 @@ messageInput.addEventListener('input', function() {
     //Mäter antal tecken i meddelandefältet
     const currentLength = messageInput.value.length;
 
+    charCount.textContent = currentLength + " / 20 characters";
+
+    if (currentLength >= 20) {
+        charCount.style.color = "green";
+    } else {
+        charCount.style.color = 'black';
+    }
+
 })
