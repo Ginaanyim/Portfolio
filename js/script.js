@@ -20,12 +20,17 @@ messageInput.addEventListener('input', function() {
     }
 });
 
+//Eventlistener for when the form i submitted
 contactForm.addEventListener('submit', function(event){
 
+    //Get values from input fields
     const emailValue = emailInput.value;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    //Regex-pattern to check valid email format
     const messageLength = messageInput.value.length;
 
+    //Check if email is valid and message length is at least 20 characters
     if (!emailPattern.test(emailValue)) {
         event.preventDefault();
         emailError.textContent = "Please enter a valid email address.";
