@@ -50,3 +50,13 @@ contactForm.addEventListener('submit', function(event){
 
 })
 
+const clearBtn = document.getElementById('clearBtn');
+clearBtn.addEventListener('click', function(){
+    contactForm.reset();
+    charCount.textContent = "0 / 20 characters";
+    charCount.style.color = "black";
+    emailError.style.display = "none";
+    emailInput.style.borderColor = "";
+    thankYouBox.style.display = "none";
+})
+

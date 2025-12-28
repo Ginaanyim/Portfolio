@@ -660,16 +660,27 @@ a {
     flex-direction: column;
 }
 
+.form-container input,
 .form-container textarea,
-.form-container input {
+.form-container select {
     padding: 0.7rem;
     margin-bottom: 8px;
     border: 1px solid rgb(208, 208, 208);
     border-radius: 4px;
     background-color: rgba(248, 248, 248, 0.9);
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
     font-size: 0.85rem;
+}
+
+.form-container select {
+    height: 2.5rem;
 }
 
 .form-container button {
@@ -774,6 +785,21 @@ footer p, .link-footer {
     border-radius: 0.4rem;  
     text-align: center;
     font-size: 0.9rem;
+}
+
+.button-group {
+    display: flex;     
+    gap: 10px;         
+    align-items: center; 
+}
+
+.button-group .clearBtn {
+    background-color: rgb(231, 231, 231);
+    color: rgb(80, 80, 80);
+}
+
+.button-group .clearBtn:hover {
+    background-color: rgb(200, 200, 200);
 }
 
 
