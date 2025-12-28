@@ -765,6 +765,19 @@ footer p, .link-footer {
     color: #333;
 }
 
+.thank-you-message {
+    display: none;
+    padding: 0.8rem 1.25rem;
+    background-color: #e6f7e6;
+    border: 0.5 solid #2ecc71; 
+    color: #2e7d32;
+    border-radius: 0.4rem;  
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+
 
 /*-----------Media query (Ipad size)----------*/
 

@@ -4,6 +4,8 @@ const charCount = document.getElementById('charCount');
 const emailInput = document.getElementById('email');
 const emailError = document.getElementById('emailError');
 const contactForm = document.getElementById('contactForm');
+const thankYouBox = document.getElementById('thankYouBox');
+
 
 //Lägger till en eventlyssnare för input i meddelandefältet
 messageInput.addEventListener('input', function() {
@@ -18,11 +20,12 @@ messageInput.addEventListener('input', function() {
     } else {
         charCount.style.color = 'black';
     }
-});
+})
 
 //Eventlistener for when the form i submitted
 contactForm.addEventListener('submit', function(event){
-
+    event.preventDefault();
+    
     //Get values from input fields
     const emailValue = emailInput.value;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -38,12 +41,11 @@ contactForm.addEventListener('submit', function(event){
         emailInput.style.borderColor = "red";
     } else if (messageLength < 20){
         event.preventDefault();
-        charCount.style.display = "block";
-        charCount.style.color = "red";
-        emailError.style.display = "none";
-    } else {
-        emailError.style.display = "none";
+        emailError.style.display = "";
         emailInput.style.borderColor = "";
+        charCount.style.color = "red";
+    } else {
+        thankYouBox.style.display = "block";
     }
 
 })
