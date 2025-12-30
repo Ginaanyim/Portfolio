@@ -24,51 +24,49 @@
 
     <!--Introduction text-->
     <section id="contact-content">
-        <h1 class="section-title contact-title">Get in Touch</h1>
-        <p class="contact-intro">
-            I am open for job opportunities and projects. 
-            Feel free to reach out with any questions or to say hello!
-        </p>
+            <h1 class="section-title contact-title">Get in Touch</h1>
+            <p class="contact-intro">
+                I am open for job opportunities and projects. 
+                Feel free to reach out with any questions or to say hello!
+            </p>
     
-        <!--Contact Form-->
-        <div class="form-container">
-            <form id ="contactForm" novalidate> 
-                <label for ="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>  
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
-                <span id="emailError" class="error-message">Please enter a valid email address.</span>
-
-                <label for ="subject">Subject</label>
-                <select id="subject" name="subject" required>
-                    <option value="" disabled selected>Select a subject</option>
-                    <option value="Job Opportunity">Job Opportunity</option>
-                    <option value="Project Collaboration">Collaboration</option>
-                    <option value="Question">Question</option>
-                    <option value="Other">Other</option>
-                </select>                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Message" rows="6" required></textarea>
-                <p id="charCount" class="char-counter">0 / 20 characters</p>
-                
-                <div class="button-group">
-                    <button type="submit" class="submit-btn">Send Message</button>
-                    <button type="button" id="clearBtn" class="clearBtn">Reset</button>
+            <div class="contact-grid-container">
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span class="label">Email</span>
+                            <p class="no-margin">
+                                <a href="mailto:ginaanyim@hotmail.com" class="contact-link">ginaanyim@hotmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="label">Location</span>
+                            <p class="no-margin">Stockholm, Sweden</p>
+                        </div>
+                    </div>
+    
+                    <div class="detail-item">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <div>
+                            <span class="label">LinkedIn</span>
+                            <p class="no-margin">
+                                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="contact-link">Virginia Anyim</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-            </form>
-
-            <div id="thankYouBox" class="thank-you-message">
-                Thank you! I will get back to you soon.
             </div>
-        </div>
     </section>
 
     <!--Footer text information-->
     <footer>
-        <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
-        <p class = "no-margin">ginaanyim@hotmail.com</p>
+        <p class = "no-margin">Updated: Dec 2025 </p>
+        <p class = "no-margin">Built with HTML/CSS/JS</p>
 
         <!--Social media icons-->
         <div class ="footer-content">
@@ -76,6 +74,10 @@
             <div class="icon-container">
                 <a href="mailto:ginaanyim@hotmail.com" class="icon">
                     <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/Ginaanyim" target="_blank" class="icon">
+                    <i class="fa-brands fa-github"></i>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">

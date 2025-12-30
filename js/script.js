@@ -41,7 +41,9 @@ contactForm.addEventListener('submit', function(event){
     if (!emailPattern.test(emailValue)) {
         emailError.textContent = "Please enter a valid email address.";
         emailError.style.display = "block";
+        emailError.style.color = "red";
         emailInput.style.borderColor = "red";
+
     } else if (messageLength < 20){
         charCount.style.color = "red";
     } else {
