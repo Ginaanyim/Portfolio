@@ -61,3 +61,13 @@ clearBtn.addEventListener('click', function(){
     thankYouBox.style.display = "none";
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll ('.filter-btn');
+    const cards = document.querySelectorAll ('.project-card');
+
+
+
+
+})
+
+
