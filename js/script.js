@@ -61,10 +61,14 @@ clearBtn.addEventListener('click', function(){
     thankYouBox.style.display = "none";
 })
 
+//Wait until the browser has loaded the HTML content
 document.addEventListener('DOMContentLoaded', function() {
+
+    //Select all filter buttons and project cards
     const buttons = document.querySelectorAll ('.filter-btn');
     const cards = document.querySelectorAll ('.project-card');
 
+    //Loop through each button and add click event listener
     buttons.forEach(function(clickedButton) {
         clickedButton.addEventListener('click', function(){
             buttons.forEach(function(button){
@@ -72,11 +76,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             clickedButton.classList.add('active');
+
+
+
         })
     })
-
-
-
 })
 
 
