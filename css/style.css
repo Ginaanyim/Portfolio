@@ -296,8 +296,8 @@ a {
     padding: 0.8rem; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     overflow: hidden;
-/* Added a transparent border so space is reserved around the card.
-   This prevents the card from growing and jumping when hovered*/
+    /* Added a transparent border so space is reserved around the card.
+    This prevents the card from growing and jumping when hovered*/
    border: 1px solid transparent; 
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -342,6 +342,42 @@ a {
     max-width: 500px;
     text-align: center;
 }
+
+.filter-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 1px solid rgb(198, 198, 198);
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.active {
+   background-color: rgba(187, 187, 187, 0.86);
+   border: 1px solid rgb(168, 168, 168);
+   transition: all 0.3s ease;
+}
+
+.filter-btn:hover:not(.active) {
+    background-color: rgba(215, 215, 215, 0.5);
+}
+
+.project-card.hide {
+    display: none;
+}
+
+.project-card.show {
+    animation: simple-fade-in 0.5s ease;
+}
+
 
 /*---------Project-detail-page--------*/
 
