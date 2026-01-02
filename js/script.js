@@ -65,6 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll ('.filter-btn');
     const cards = document.querySelectorAll ('.project-card');
 
+    buttons.forEach(function(clickedButton) {
+        clickedButton.addEventListener('click', function(){
+            buttons.forEach(function(button){
+                button.classList.remove('active');
+            });
+
+            clickedButton.classList.add('active');
+        })
+    })
 
 
 
