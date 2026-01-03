@@ -83,6 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
             //Ensures only clicked button is active
             clickedButton.classList.add('active');
 
+            const filterValue = clickedButton.getAttribute('data-filter');
+
+            cards.forEach(function(card){
+                if (filterValue === 'all' || card.classList.contains(filterValue)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+
+            })
+
     });
 });
 });
