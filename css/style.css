@@ -269,9 +269,6 @@ a {
 }
 
 .project-preview p {
-    opacity: 0;
-    animation: fadeInSlideUp 1s ease-out forwards;
-    animation-delay: 0.2s;
     font-size: 0.9rem;
 }
 
@@ -298,8 +295,6 @@ a {
     overflow: hidden;
 /* Added a transparent border so space is reserved around the card.
    This prevents the card from growing and jumping when hovered*/
-   border: 1px solid transparent; 
-    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -352,6 +347,9 @@ display: flex;
 justify-content: center;
 gap: 10px;
 flex-wrap: wrap;
+opacity: 0;
+animation: fadeInSlideUp 1s ease-out forwards;
+animation-delay: 0.3s;
 }
 
 .filter-btn {
@@ -362,6 +360,9 @@ border-radius: 5px;
 font-size: 0.75rem;
 cursor: pointer;
 transition: background-color 0.3s ease;
+opacity: 0;
+animation: fadeInSlideUp 1s ease-out forwards;
+animation-delay: 0.3s;
 }
 
 .filter-btn.active {
@@ -372,14 +373,6 @@ transition: all 0.3s ease;
 
 .filter-btn:hover:not(.active) {
 background-color: rgba(215, 215, 215, 0.5);
-}
-
-.project-card.hide {
-display: none;
-}
-
-.project-card.show {
-animation: simple-fade-in 0.5s ease;
 }
 
 
