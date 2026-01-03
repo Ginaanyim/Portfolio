@@ -19,21 +19,32 @@
     }
 
     function validateMessage() {
+        return messageInput.value.length >= 20;
     }
 
     function showError(inputElement, message){
-
+        inputElement.style.borderColor = "#dc3545";
+        
+        const errorDisplay = document.getElementById(inputElement.id + "Error");
+        if (errorDisplay) {
+            errorDisplay.textContent = message;
+            errorDisplay.style.display = "block";
+        }
     }
 
-    function clearError(inputElement){
+    function clearError(inputElement) {
 
     }
 
     function clearForm(){
+        contactForm.reset();
+        charCount.textContent = "0 / 20 characters";
+        charCount.style.color = "black";
 
 
     }
 
+    
 
 
 
