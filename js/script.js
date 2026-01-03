@@ -93,8 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     card.style.display = 'none';
                 }
-            })
-
+            });
     });
 });
 });
