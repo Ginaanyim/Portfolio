@@ -1,3 +1,46 @@
+    //Variables for form elements
+    const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const messageInput = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const thankYouBox = document.getElementById('thankYouBox');
+
+
+    function validateName() {
+        const namePattern = /^[a-zA-ZåäöÅÄÖ ]+$/;
+        return namePattern.test(nameInput.value); 
+    }
+
+    function validateEmail() {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(emailInput.value); 
+    }
+
+    function validateMessage() {
+    }
+
+    function showError(inputElement, message){
+
+    }
+
+    function clearError(inputElement){
+
+    }
+
+    function clearForm(){
+
+
+    }
+
+
+
+
+
+
+
+/*
 //Get form element
 const contactForm = document.getElementById('contactForm');
 
@@ -100,3 +143,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+*/
