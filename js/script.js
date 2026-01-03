@@ -83,15 +83,16 @@ document.addEventListener('DOMContentLoaded', function() {
             //Ensures only clicked button is active
             clickedButton.classList.add('active');
 
+            //Get category namede from clicked button
             const filterValue = clickedButton.getAttribute('data-filter');
 
+            //Loop through each card to show/hide 
             cards.forEach(function(card){
                 if (filterValue === 'all' || card.classList.contains(filterValue)) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
                 }
-
             })
 
     });
