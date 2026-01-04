@@ -120,6 +120,44 @@
     }
 }
 
+const myProjects = [
+    {
+        title: "E-commerce Website",
+        category: "web-development",
+        image: "images/coffee-logo.png",
+        description: "A coffee shop website."
+    }, 
+    {
+        title: "Dog Registry",
+        category: "programming",
+        image: "images/project-2.jpeg",
+        description: "Object-oriented Java application."
+    },
+    {
+        title: "Pathfinder",
+        category: "programming",
+        image: "images/project-3.jpeg",
+        description: "Interactive map and graph editor."
+    },
+    {
+        title: "App Prototype",
+        category: "design",
+        image: "images/project-4.png",
+        description: "Language App Prototype."
+    },
+    {
+        title: "Quiz Game",
+        category: "web-development",
+        image: "images/quiz.png",
+        description: "Simple Quiz program."
+    },
+    {
+        title: "Logo Design",
+        category: "design",
+        image: "images/logo.png",
+        description: "Logo and visual style."
+    }
+];
 
 
 
