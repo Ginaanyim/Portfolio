@@ -122,40 +122,52 @@
 
 const myProjects = [
     {
+        id: 1,
         title: "E-commerce Website",
         category: "web-development",
         image: "images/coffee-logo.png",
-        description: "A coffee shop website."
+        description: "A coffee shop website.",
+        technologies: ["PHP", "HTML", "CSS", "JavaScript"]
     }, 
     {
+        id: 2,
         title: "Dog Registry",
         category: "programming",
         image: "images/project-2.jpeg",
-        description: "Object-oriented Java application."
+        description: "Object-oriented Java application.",
+        technologies: ["Java", "OOP"],
     },
     {
+        id: 3,
         title: "Pathfinder",
         category: "programming",
         image: "images/project-3.jpeg",
-        description: "Interactive map and graph editor."
+        description: "Interactive map and graph editor.",
+        technologies: ["Java", "JavaFX"],
     },
     {
+        id: 4,
         title: "App Prototype",
         category: "design",
         image: "images/project-4.png",
-        description: "Language App Prototype."
+        description: "Language App Prototype.",
+        technologies: ["Figma", "Prototype"],
     },
     {
+        id: 5,
         title: "Quiz Game",
         category: "web-development",
         image: "images/quiz.png",
-        description: "Simple Quiz program."
+        description: "Simple Quiz program.",
+        technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
+        id: 6,
         title: "Logo Design",
         category: "design",
         image: "images/logo.png",
-        description: "Logo and visual style."
+        description: "Logo and visual style.",
+        technologies: ["Illustrator"],
     }
 ];
 
