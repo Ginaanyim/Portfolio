@@ -22,58 +22,19 @@
         </nav>
     </header>
 
-    <section class ="project-preview" id ="full-projects">
+    <section class="project-preview" id="full-projects">
         <h2>All Projects</h2>
-        <p id ="projects-p">Here is a collection of my projects. From building websites with databases, to programming in Java. During all processes, I have enjoyed learning new things and technologies. Click on a project to see more!</p>
-
-        <div class = "filter-buttons">
+        
+        <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web-development">Web Development</button>
             <button class="filter-btn" data-filter="programming">Programming</button>
             <button class="filter-btn" data-filter="design">Design</button>
         </div>
+    
+        <p id="project-counter">Showing 0 of 0 projects</p>
         
-        <div class="project-grid">
-            <a href="project-1.html" class="project-card web-development">
-                <img src="images/coffee-logo.png" alt="Coffee logo">
-                <h3>E-commerce Website</h3>
-                <p>Website for a coffee shop</p>
-                <ul class="skill-badges">
-                    <li class="skill-badge">HTML</li>
-                    <li class="skill-badge">CSS</li>
-                    <li class="skill-badge">JavaScript</li>
-                    <li class="skill-badge">+</li>
-                </ul>
-            </a>
-
-            <a href="project-2.html" class="project-card programming">
-                <img src="images/project-2.jpeg" alt="Picture of two dogs">
-                <h3>Dog Registry</h3>
-                <p>Object-oriented programming</p>
-                <ul class="skill-badges">
-                    <li class="skill-badge">Java</li>
-                </ul>
-            </a>
-
-            <a href="project-3.html" class="project-card programming">
-                <img src="images/project-3.jpeg" alt="Picture of buildings">
-                <h3>Pathfinder</h3>
-                <p>Interactive map and graph editor</p>
-                <ul class="skill-badges">
-                    <li class="skill-badge">Java</li>
-                    <li class="skill-badge">JavaFX</li>
-                </ul>
-            </a> 
-
-            <a href="project-4.html" class="project-card design">
-                <img src="images/project-4.png" alt="App prototype picture">
-                <h3>App Prototype </h3>
-                <p>Prototype of a Language App</p>
-                <ul class ="skill-badges">
-                    <li class ="skill-badge">Figma</li>
-                </ul>
-            </a>
-        </div>
+        <div class="project-grid" id="project-container"></div>
     </section>
 
     <!--Footer text information-->
