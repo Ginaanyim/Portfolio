@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make page responsive on all devices-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet"> <!--To import font-->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--To import icons-->
+    <title>Portfolio | Quiz Game</title>
+</head>
+<body>
+    <!--Header with navigation-menu and clickable logo-->
+    <header>
+        <nav class="nav">
+            <a href="index.html" class="logo">Portfolio.</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Section which presents header of project detail page-->
+    <section class ="project-detail-header">
+        <a href="projects.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to projects
+        </a>
+        <h1>Quiz Game</h1>
+    </section>
+
+    <!--Section with description of project-->
+    <section class="project-info-container"> 
+        <div class="about-project">
+            <h2>Project Description:</h2>
+            <p>
+                An interactive speed-quiz where users must answer a question within 15 seconds. The project focuses on timing logic and real-time user feedback.
+            </p>
+            
+            <ul>
+                <li>Timer Logic: Built with JavaScript intervals to handle a 15-second countdown and automatic timeouts.</li>
+                <li>User Interface: Features pop-up instructions and dynamic DOM updates using jQuery to show or hide the game area.</li>
+                <li>Input Handling: Includes validation that ignores case sensitivity and extra spaces for a better user experience.</li>
+                <li>Flow Control: Managed through event listeners that trigger start, reset, and submission functions.</li>
+            </ul>
+        
+            <p>
+                The project demonstrates how to synchronize multiple asynchronous actions, such as stopping a countdown the exact moment a user submits their answer.
+            </p>        
+        </div>
+    
+        <!--Sidebar with used technologies-->
+        <div class="info-sidebar"> 
+            <div class="technologies">
+                <h3>Technologies Used</h3>
+                <ul class="skill-badges">
+                    <li class="skill-badge">HTML</li>
+                    <li class="skill-badge">CSS</li>
+                    <li class="skill-badge">JavaScript</li>
+                </ul>
+            </div>
+    
+            <!--Small card with links for project-->
+            <div class="links-card">
+                <h3>Links</h3>
+                <ul class="links-list">
+                    <li>
+                        <i class="fa-brands fa-github"></i> <a href="https://github.com/Ginaanyim/Ambessa-Coffee-Shop" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+        <!--Section with media (images) for specific project-->
+        <section class="project-media-placeholder">
+            <img src="images/quiz.png" alt = "Image of mini quiz">
+            <img src = "images/quiz-start.png" alt ="Image of mini quiz">
+            <img src = "images/quiz-name.png" alt="Image of mini quiz">
+            <img src = "images/quiz-question.png" alt="Image of mini quiz">
+            <img src = "images/quiz-result.png" alt="Image of mini quiz">
+            <img src="images/quiz-sucess.png" alt = "Image of mini quiz">
+        </section>
+
+    <!--Footer text information-->
+    <footer>
+        <p class = "no-margin">&copy; 2025, Virginia Anyim </p>
+        <p class = "no-margin">ginaanyim@hotmail.com</p>
+
+        <!--Social media icons-->
+        <div class ="footer-content">
+            <div class="icon-container">
+                <a href="mailto:ginaanyim@hotmail.com" class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/virginia-anyim-9443831ba/" target="_blank" class="icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -127,7 +127,8 @@ const myProjects = [
         category: "web-development",
         image: "images/coffee-logo.png",
         description: "A coffee shop website.",
-        technologies: ["PHP", "HTML", "CSS", "JavaScript"]
+        technologies: ["PHP", "HTML", "CSS", "JavaScript"],
+        link: "project-1.html",
     }, 
     {
         id: 2,
@@ -136,6 +137,7 @@ const myProjects = [
         image: "images/project-2.jpeg",
         description: "Object-oriented Java application.",
         technologies: ["Java", "OOP"],
+        link: "project-2.html",
     },
     {
         id: 3,
@@ -144,6 +146,7 @@ const myProjects = [
         image: "images/project-3.jpeg",
         description: "Interactive map and graph editor.",
         technologies: ["Java", "JavaFX"],
+        link: "project-3.html",
     },
     {
         id: 4,
@@ -152,6 +155,7 @@ const myProjects = [
         image: "images/project-4.png",
         description: "Language App Prototype.",
         technologies: ["Figma", "Prototype"],
+        link: "project-4.html",
     },
     {
         id: 5,
@@ -160,6 +164,7 @@ const myProjects = [
         image: "images/quiz.png",
         description: "Simple Quiz program.",
         technologies: ["HTML", "CSS", "JavaScript"],
+        link
     },
     {
         id: 6,
