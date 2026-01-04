@@ -40,6 +40,7 @@
         }
     }
 
+    //Reset all form elements
     function clearForm(){
         contactForm.reset();
         charCount.textContent = "0 / 20 characters";
@@ -50,7 +51,6 @@
         emailInput.style.borderColor = "";
         clearError(messageInput);
         messageInput.style.borderColor = "";
-        thankYouBox.style.display = "none";
     }
 
     /*Check if form exists on the page (to ensure code only runs on pages with the form)
@@ -67,7 +67,7 @@
             }
         });
 
-    //Eventlistener for when the form i submitted
+    //Eventlistener for when the form i submitted, with validation
     contactForm.addEventListener('submit', function(event){
         event.preventDefault();
 
@@ -90,19 +90,24 @@
         }
 
         if (!validateMessage()){
-            showError(messageInput, "Must be at least 20 characters long.")
+            messageInput.style.borderColor = "#dc3545";
+            charCount.style.color = "#dc3545";            
             validForm = false;
         } else {
             clearError(messageInput);
             messageInput.style.borderColor = "green";
         }
 
+        //Success message if form is valid
         if (validForm) {
             const firstName = nameInput.value.split (' ')[0];
             thankYouBox.textContent = 'Thank you for your message, ' + firstName + '!';
             thankYouBox.style.display = "block";
-            clearForm();
 
+            setTimeout(function(){
+                thankYouBox.style.display = "none";
+            }, 3000);
+            clearForm();
         }
     });
 

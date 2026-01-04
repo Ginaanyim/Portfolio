@@ -35,10 +35,11 @@
             <form id ="contactForm" novalidate> 
                 <label for ="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>  
+                <span id="nameError" class="error-message"></span>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Your Email">
-                <span id="emailError" class="error-message">Please enter a valid email address.</span>
+                <span id="emailError" class="error-message"></span>
 
                 <label for ="subject">Subject</label>
                 <select id="subject" name="subject" required>
@@ -51,6 +52,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Message" rows="6" required></textarea>
                 <p id="charCount" class="char-counter">0 / 20 characters</p>
+                <span id="messageError" class="error-message"></span>
                 
                 <div class="button-group">
                     <button type="submit" class="submit-btn">Send Message</button>
