@@ -46,7 +46,8 @@
         charCount.style.color = "black";
     }
 
-    //Eventlisteners 
+    /*Check if form exists on the page (to ensure code only runs on pages with the form)
+    Add event listener for input in message-field */
     if (contactForm) {
         messageInput.addEventListener('input', function() {
             const currentLength = messageInput.value.length;
@@ -57,44 +58,52 @@
             } else {
                 charCount.style.color = "#dc3545";
             }
-        })
+        });
+
+    //Eventlistener for when the form i submitted
+    contactForm.addEventListener('submit', function(event){
+        event.preventDefault();});
+
+        let validForm = true;
+
+        if (!validateName()) {
+            showError(nameInput, "Please enter a valid name.");
+            validForm = false;
+        } else {
+            clearError(nameInput);
+            nameInput.style.borderColor = "green";
+        }
+
+        if (!validateEmail()){
+            showError(emailInput, "Please enter a valid email adress.");
+            validForm = false;
+        } else {
+            clearError(emailInput);
+            emailInput.style.borderColor = "green";
+        }
+
+        if (!validateMessage()){
+            showError(messageInput, "Must be at least 20 characters long.")
+            validForm = false;
+        } else {
+            clearError(messageInput);
+            messageInput.style.borderColor = "green";
+        }
+
+        if (validForm) {
+            thankYouBox.style.display = "block";
+            clearForm();
+        }
+
+
+
+
     }
-
-
-
-    
-
-
 
 
 
 
 /*
-//Get form element
-const contactForm = document.getElementById('contactForm');
-
-//Check if form exists on the page (to ensure code only runs on pages with the form)
-if (contactForm) {
-    //Variables for form elements
-    const messageInput = document.getElementById('message');
-    const charCount = document.getElementById('charCount');
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('emailError');
-    const thankYouBox = document.getElementById('thankYouBox');
-
-    //Add event listener for input in message-field 
-    messageInput.addEventListener('input', function() {
-        //Count numbers of characters 
-        const currentLength = messageInput.value.length;
-        charCount.textContent = currentLength + " / 20 characters";
-
-        //Change color of character count based on length
-        if (currentLength >= 20) {
-            charCount.style.color = "green";
-        } else {
-            charCount.style.color = 'black';
-        }
-    });
 
     //Eventlistener for when the form i submitted
     contactForm.addEventListener('submit', function(event){
