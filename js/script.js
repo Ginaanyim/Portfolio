@@ -7,7 +7,6 @@
     const emailError = document.getElementById('emailError');
     const thankYouBox = document.getElementById('thankYouBox');
 
-
     function validateName() {
         const namePattern = /^[a-zA-ZåäöÅÄÖ ]+$/;
         return namePattern.test(nameInput.value); 
@@ -33,16 +32,35 @@
     }
 
     function clearError(inputElement) {
+        inputElement.style.borderColor = ""; 
 
+        const errorDisplay = document.getElementById(inputElement.id + "Error");
+        if (errorDisplay) {
+            errorDisplay.style.display = "none";
+        }
     }
 
     function clearForm(){
         contactForm.reset();
         charCount.textContent = "0 / 20 characters";
         charCount.style.color = "black";
-
-
     }
+
+    //Eventlisteners 
+    if (contactForm) {
+        messageInput.addEventListener('input', function() {
+            const currentLength = messageInput.value.length;
+            charCount.textContent = currentLength + " / 20 characters";
+
+            if (validateMessage()){
+                charCount.style.color = "green";
+            } else {
+                charCount.style.color = "#dc3545";
+            }
+        })
+    }
+
+
 
     
 
