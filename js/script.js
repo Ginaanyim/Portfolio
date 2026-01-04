@@ -164,7 +164,7 @@ const myProjects = [
         image: "images/quiz.png",
         description: "Simple Quiz program.",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link
+        link: "project-5.html",
     },
     {
         id: 6,
@@ -173,8 +173,21 @@ const myProjects = [
         image: "images/logo.png",
         description: "Logo and visual style.",
         technologies: ["Illustrator"],
+        link: "project-6.html",
     }
 ];
+
+function displayProjects(filterValue) {
+    const container = document.getElementById('projectContainer');
+    const counter = document.getElementById('projectCounter');
+
+    let count = 0;
+}
+
+
+
+
+
 
 
 
