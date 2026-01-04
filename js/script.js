@@ -44,6 +44,13 @@
         contactForm.reset();
         charCount.textContent = "0 / 20 characters";
         charCount.style.color = "black";
+        clearError(nameInput);
+        nameInput.style.borderColor = "";
+        clearError(emailInput);
+        emailInput.style.borderColor = "";
+        clearError(messageInput);
+        messageInput.style.borderColor = "";
+        thankYouBox.style.display = "none";
     }
 
     /*Check if form exists on the page (to ensure code only runs on pages with the form)
@@ -62,7 +69,7 @@
 
     //Eventlistener for when the form i submitted
     contactForm.addEventListener('submit', function(event){
-        event.preventDefault();});
+        event.preventDefault();
 
         let validForm = true;
 
@@ -91,60 +98,28 @@
         }
 
         if (validForm) {
+            const firstName = nameInput.value.split (' ')[0];
+            thankYouBox.textContent = 'Thank you for your message, ' + firstName + '!';
             thankYouBox.style.display = "block";
             clearForm();
-        }
 
-
-
-
-    }
-
-
-
-
-/*
-
-    //Eventlistener for when the form i submitted
-    contactForm.addEventListener('submit', function(event){
-        event.preventDefault();
-
-        //Reset error messages and styles
-        emailError.style.display = "";
-        emailInput.style.borderColor = "";
-        
-        //Get values from input fields
-        const emailValue = emailInput.value;
-        const messageLength = messageInput.value.length;
-
-        //Regex-pattern to check valid email format
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        //Check if email is valid and message length is at least 20 characters
-        if (!emailPattern.test(emailValue)) {
-            emailError.textContent = "Please enter a valid email address.";
-            emailError.style.display = "block";
-            emailInput.style.borderColor = "red";
-        } else if (messageLength < 20){
-            charCount.style.color = "red";
-        } else {
-            thankYouBox.style.display = "block";
         }
     });
 
     //Eventlistener for reset button
     const clearBtn = document.getElementById('clearBtn');
-    if (clearBtn) {
+        if (clearBtn) {
         clearBtn.addEventListener('click', function(){
-            contactForm.reset();
-            charCount.textContent = "0 / 20 characters";
-            charCount.style.color = "black";
-            emailError.style.display = "none";
-            emailInput.style.borderColor = "";
-            thankYouBox.style.display = "none";
+            clearForm();
         });
     }
 }
+
+
+
+
+
+/*
 
 //Wait until the browser has loaded the HTML content
 document.addEventListener('DOMContentLoaded', function() {
