@@ -300,6 +300,7 @@ a {
     This prevents the card from growing and jumping when hovered*/
     border: 1px solid transparent; 
     transition: border 0.3s ease, box-shadow 0.3s ease;
+    text-align: center
 }
 
 .project-card:hover {
@@ -334,6 +335,15 @@ a {
 .project-card p {
     color: #444;
     font-size: 0.85rem;
+}
+
+.project-card a {
+    color: rgb(214, 128, 93);
+    font-weight: 600;
+}
+
+.project-card a:hover {
+    color: rgb(201, 105, 63);
 }
 
 #projects-p{
