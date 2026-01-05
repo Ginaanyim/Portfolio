@@ -133,7 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
         buttons.forEach(function(clickedButton) {
             clickedButton.addEventListener('click', function() {
 
-                buttons.forEach(function(btn) { btn.classList.remove('active'); });
+                buttons.forEach(function(btn) { 
+                    btn.classList.remove('active'); 
+                });
+
                 clickedButton.classList.add('active');
 
                 const filterValue = clickedButton.getAttribute('data-filter');
@@ -146,8 +149,41 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayProjects(filterValue) {
         const container = document.getElementById('project-container');
         const counter = document.getElementById('project-counter');
-
+        
         let count = 0;
+        container.innerHTML = "";
+
+        myProjects.forEach(function(project) {
+            if (filterValue === 'all' || project.category === filterValue) {
+                count++;
+
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                const img = document.createElement('img');
+                img.src = project.image;
+                img.alt = project.title;
+                const title = document.createElement('h3');
+                title.textContent = project.title;
+                const description = document.createElement('p');
+                description.textContent = project.description;
+                const link = document.createElement('a');
+                link.href = project.link;
+                link.textContent = "view project";
+                link.className = "project-link";
+
+                card.appendChild(img);
+                card.appendChild(title);
+                card.appendChild(description);
+                card.appendChild(link);
+                container.appendChild(card);
+            }
+        });
+        if (counter) {
+            counter.textContent = count + " of " + myProjects.length + " projects";
+        }
+
+    }
+
 }); 
 
 const myProjects = [
@@ -206,3 +242,42 @@ const myProjects = [
         link: "project-6.html",
     }
 ];
+
+/*
+
+//Wait until the browser has loaded the HTML content
+document.addEventListener('DOMContentLoaded', function() {
+
+    //Select all filter buttons and project cards
+    const buttons = document.querySelectorAll ('.filter-btn');
+    const cards = document.querySelectorAll ('.project-card');
+
+    //Loop through each button individually 
+    buttons.forEach(function(clickedButton) {
+        //Eventlistener running when a button is clicked
+        clickedButton.addEventListener('click', function(){
+            //Loop through buttons to remove active class
+            buttons.forEach(function(button){
+                button.classList.remove('active');
+            });
+            //Ensures only clicked button is active
+            clickedButton.classList.add('active');
+
+            //Get category namede from clicked button
+            const filterValue = clickedButton.getAttribute('data-filter');
+
+            //Loop through each card to show/hide 
+            cards.forEach(function(card){
+                if (filterValue === 'all' || card.classList.contains(filterValue)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+    });
+});
+});
+
+
+
+*/
