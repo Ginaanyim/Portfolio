@@ -157,10 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (filterValue === 'all' || project.category === filterValue) {
                 count++;
         
-                const card = document.createElement('a');
+                const card = document.createElement('div');
                 card.className = 'project-card';
-                card.href = project.link;
-                card.style.display = 'block'; 
         
                 const img = document.createElement('img');
                 img.src = project.image;
@@ -171,11 +169,18 @@ document.addEventListener('DOMContentLoaded', function() {
         
                 const description = document.createElement('p');
                 description.textContent = project.description;
+
+                const link = document.createElement('a');
+                link.href = project.link;
+                link.textContent = "View project";
+                link.className = "project-link";
         
                 card.appendChild(img);
                 card.appendChild(title);
                 card.appendChild(description);
+                card.appendChild(link);
                 container.appendChild(card);
+
             }
         });
         if (counter) {
@@ -242,42 +247,3 @@ const myProjects = [
         link: "project-6.html",
     }
 ];
-
-/*
-
-//Wait until the browser has loaded the HTML content
-document.addEventListener('DOMContentLoaded', function() {
-
-    //Select all filter buttons and project cards
-    const buttons = document.querySelectorAll ('.filter-btn');
-    const cards = document.querySelectorAll ('.project-card');
-
-    //Loop through each button individually 
-    buttons.forEach(function(clickedButton) {
-        //Eventlistener running when a button is clicked
-        clickedButton.addEventListener('click', function(){
-            //Loop through buttons to remove active class
-            buttons.forEach(function(button){
-                button.classList.remove('active');
-            });
-            //Ensures only clicked button is active
-            clickedButton.classList.add('active');
-
-            //Get category namede from clicked button
-            const filterValue = clickedButton.getAttribute('data-filter');
-
-            //Loop through each card to show/hide 
-            cards.forEach(function(card){
-                if (filterValue === 'all' || card.classList.contains(filterValue)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-    });
-});
-});
-
-
-
-*/
