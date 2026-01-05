@@ -149,32 +149,32 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayProjects(filterValue) {
         const container = document.getElementById('project-container');
         const counter = document.getElementById('project-counter');
-        
+
         let count = 0;
         container.innerHTML = "";
 
         myProjects.forEach(function(project) {
             if (filterValue === 'all' || project.category === filterValue) {
                 count++;
-
-                const card = document.createElement('div');
+        
+                const card = document.createElement('a');
                 card.className = 'project-card';
+                card.href = project.link;
+                card.style.display = 'block'; 
+        
                 const img = document.createElement('img');
                 img.src = project.image;
                 img.alt = project.title;
+        
                 const title = document.createElement('h3');
                 title.textContent = project.title;
+        
                 const description = document.createElement('p');
                 description.textContent = project.description;
-                const link = document.createElement('a');
-                link.href = project.link;
-                link.textContent = "view project";
-                link.className = "project-link";
-
+        
                 card.appendChild(img);
                 card.appendChild(title);
                 card.appendChild(description);
-                card.appendChild(link);
                 container.appendChild(card);
             }
         });
