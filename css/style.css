@@ -293,8 +293,10 @@ a {
     padding: 0.8rem; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     overflow: hidden;
-/* Added a transparent border so space is reserved around the card.
-   This prevents the card from growing and jumping when hovered*/
+    /* Added a transparent border so space is reserved around the card.
+    This prevents the card from growing and jumping when hovered*/
+    border: 1px solid transparent; 
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
