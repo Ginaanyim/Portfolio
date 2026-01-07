@@ -356,7 +356,7 @@ animation-delay: 0.3s;
 
 .filter-btn {
 background-color: transparent;
-border: 1px solid rgb(198, 198, 198);
+border: 1px solid rgb(219, 219, 219);
 padding: 0.5rem 0.8rem;
 border-radius: 5px;
 font-size: 0.75rem;
@@ -368,13 +368,13 @@ animation-delay: 0.3s;
 }
 
 .filter-btn.active {
-background-color: rgba(187, 187, 187, 0.86);
-border: 1px solid rgb(168, 168, 168);
+background-color: rgba(255, 229, 186, 0.86);
+border: 1px solid rgba(255, 217, 156, 0.86);
 transition: all 0.3s ease;
 }
 
 .filter-btn:hover:not(.active) {
-background-color: rgba(215, 215, 215, 0.5);
+background-color: rgba(255, 241, 214, 0.684);
 }
 
 
