@@ -1,3 +1,4 @@
+//Waits until whole site is loaded
 document.addEventListener('DOMContentLoaded', function() {
     
     //Variables for form elements
@@ -153,10 +154,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let count = 0;
         container.innerHTML = "";
 
-        myProjects.forEach(function(project) {
+        for (let i = 0; i < myProjects.length; i++){
+            const project = myProjects[i];
+            
             if (filterValue === 'all' || project.category === filterValue) {
-                count++;
-        
                 const card = document.createElement('div');
                 card.className = 'project-card';
         
@@ -180,9 +181,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.appendChild(description);
                 card.appendChild(link);
                 container.appendChild(card);
+                count++;
 
+                if (count >= 4) {
+                    break;
+                }
             }
-        });
+        }
+          
         if (counter) {
             counter.textContent = count + " of " + myProjects.length + " projects";
         }
@@ -191,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 }); 
 
+//Array with project data
 const myProjects = [
     {
         id: 1,
