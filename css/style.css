@@ -839,7 +839,11 @@ footer p, .link-footer {
     }
 
     .nav ul a {
-        font-size: 0.85rem; 
+        font-size: 0.95rem; 
+    }
+
+    #home-content {
+        padding: 3.5rem 2.5rem; 
     }
 
     #home-content h1 {
@@ -938,21 +942,12 @@ footer p, .link-footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #home-content {
-        width: 100%;
-        padding: 3.5rem 2.5rem; 
-    }
-
-    #home-content h1, #home-p {
+    #home-content h1, #home-p, .contact-btn {
         margin-left: 5rem;
     }
 
     #home-content h1 {
         font-size: 2.3rem; 
-    }
-
-    .contact-btn {
-        margin-left: 5rem;
     }
 
     .nav {
@@ -963,10 +958,6 @@ footer p, .link-footer {
 
     .nav .logo {
         font-size: 1.3rem; 
-    }
-
-    .nav ul a { 
-        font-size: 0.85rem; 
     }
 
     .nav ul {
@@ -1025,7 +1016,7 @@ footer p, .link-footer {
 @media (min-width: 1440px){
 
     #home-content {
-        padding: 5rem 6rem; 
+        padding: 5rem 14rem; 
     }
 
 }
