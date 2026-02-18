@@ -110,4 +110,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // --- TILLBAKA TILL TOPPEN FUNKTION ---
+    const backToTopButton = document.getElementById("backToTop");
+
+    if (backToTopButton) {
+        // Visa knappen när man scrollar ner 300px från toppen
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // När man klickar på knappen, scrolla mjukt till toppen
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
