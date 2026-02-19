@@ -149,7 +149,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.15rem; 
+    font-size: 1.1rem; 
     
 }
 
@@ -187,7 +187,7 @@ a {
     height: auto;
     margin: -2.5rem auto 3rem auto; /*negativ margin to push down content from under sticker header*/
     padding: 3rem 1.25rem; 
-    background-image: linear-gradient(to right, rgba(251, 204, 174, 0.938), rgba(255, 203, 134, 0.86));
+    background-image: linear-gradient(to right, rgba(255, 194, 144, 0.938), rgba(255, 187, 158, 0.927));
     border: 1px solid rgb(222, 222, 222);
     display: flex;
     flex-direction: column;
@@ -214,7 +214,7 @@ a {
     animation: simple-fade-in 0.8s ease-out forwards;
     animation-delay: 0.9s;
     max-width: 650px;
-    color: #444;
+    color: #404040;
     font-size: 0.9rem;
 }
 
@@ -295,7 +295,7 @@ a {
 }
 
 .value-card p {
-    max-width: 260px;
+    max-width: 230px;
     color: #6a6a6a;
     line-height: 1.5;
     font-size: 0.85rem; 
@@ -1051,7 +1051,7 @@ footer p, .link-footer {
         font-size: 1.6rem; 
     }
     h2 {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
     }
 
     p {
