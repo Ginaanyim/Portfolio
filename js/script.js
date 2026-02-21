@@ -111,20 +111,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- TILLBAKA TILL TOPPEN FUNKTION ---
     const backToTopButton = document.getElementById("backToTop");
+    let hideTimer;
 
     if (backToTopButton) {
-        // Visa knappen när man scrollar ner 300px från toppen
         window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
                 backToTopButton.style.display = "block";
+                clearTimeout(hideTimer);
+                hideTimer = setTimeout(function() {
+                    backToTopButton.style.display = "none";
+                }, 2500);
             } else {
                 backToTopButton.style.display = "none";
             }
         };
 
-        // När man klickar på knappen, scrolla mjukt till toppen
         backToTopButton.addEventListener("click", function() {
             window.scrollTo({
                 top: 0,
@@ -133,6 +135,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
-});
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
+    const projectGrid = document.querySelector('.project-grid');
+    if (projectGrid) observer.observe(projectGrid);
+
+    document.querySelectorAll('.value-card').forEach(card => observer.observe(card));
+    document.querySelectorAll('.timeline-card').forEach(card => observer.observe(card));
+    document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+
+});
