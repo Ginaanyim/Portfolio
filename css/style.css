@@ -31,7 +31,7 @@ header {
 }
 
 .nav {
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1026,8 +1026,10 @@ footer p, .link-footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #home-content h1, #home-p, .contact-btn {
-        margin-left: 2rem;
+    #home-content {
+        max-width: 100%;
+        padding-left: calc((100% - 1000px) / 2 + 3rem);
+        padding-right: calc((100% - 1000px) / 2);
     }
 
     #home-content h1 {
@@ -1035,7 +1037,7 @@ footer p, .link-footer {
     }
 
     .nav {
-        padding: 0rem;
+        padding: 0 3rem;
         max-width: 1200px;
         margin: auto;
     }
@@ -1100,7 +1102,7 @@ footer p, .link-footer {
 @media (min-width: 1440px){
 
     #home-content {
-        padding: 5rem 14rem; 
-    }
+        padding-left: calc((100% - 1000px) / 2 + 3rem);
+        padding-right: calc((100% - 1000px) / 2);    }
 
 }
